@@ -143,8 +143,6 @@ return(res.json());
 })
 }
 
-//active, confirmed, death, recovered cases from day1 in array
-
 var active=[];
 var confirmed=[];
 var death=[];
@@ -159,24 +157,12 @@ confirmed.push(res2[i].Confirmed);
 death.push(res2[i].Deaths);
 recovered.push(res2[i].Recovered);
 }
-// document.getElementById("d2l1").innerHTML=active[i].Active+death[i].Deaths+recovered[i].Recovered;
-// document.getElementById("d2l2").innerHTML=death[i].Deaths;
-// document.getElementById("d2l3").innerHTML=recovered[i].Recovered;
-// var d=document.createElement("li");
-// var j=document.getElementById("div2");
-// j.append(d);
-// var t=document.createTextNode(active[i ].Active);
-// j.append(t);
-//console.log(res2);
 console.log(active[107]);
-})
-
-// HighChart
-
-Highcharts.chart('middlebox', {
+  
+  Highcharts.chart('middlebox', {
 
   title: {
-    text: 'Total Report Of the Pandemic in India'
+    text: 'Report from 30th January to Present Day'
   },
 
   subtitle: {
@@ -191,7 +177,7 @@ Highcharts.chart('middlebox', {
 
   xAxis: {
     accessibility: {
-      rangeDescription: 'Range: 0 to 100'
+      rangeDescription: 'Range: 2010 to 2017'
     }
   },
 
@@ -211,6 +197,9 @@ Highcharts.chart('middlebox', {
   },
 
   series: [{
+    name: 'Active',
+    data: active
+  }, {
     name: 'Confirmed',
     data: confirmed
   }, {
@@ -219,10 +208,6 @@ Highcharts.chart('middlebox', {
   }, {
     name: 'Recovered',
     data: recovered
-  },
-   {
-    name: 'Active',
-    data: active
   }],
 
   responsive: {
@@ -240,4 +225,5 @@ Highcharts.chart('middlebox', {
     }]
   }
 
+});
 });

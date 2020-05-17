@@ -1,7 +1,8 @@
 body{
-    background-image: url("city.jpg");
+    background-image: url("images/city.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Kaushan Script', cursive;
 }
 #leftbox { 
     float:left;
