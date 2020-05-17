@@ -58,5 +58,5 @@ window.onload = function() {
 function func()
 {
     var url = "http://www.google.com";
-    window.location.href=url;
+    window.location.href=;
 }
